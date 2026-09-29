@@ -98,11 +98,3 @@ const jpegImageData = jpeg.encode(rawImageData, 90);
 
 // Write to root logo.jpeg
 fs.writeFileSync(path.resolve('./logo.jpeg'), jpegImageData.data);
-
-// Also write to public/logo.jpeg
-if (!fs.existsSync('./public')) {
-  fs.mkdirSync('./public', { recursive: true });
-}
-fs.writeFileSync(path.resolve('./public/logo.jpeg'), jpegImageData.data);
-
-console.log('Successfully generated logo.jpeg in root and public/logo.jpeg!');
