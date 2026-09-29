@@ -1,11 +1,36 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
+import fs from 'fs';
 import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    plugins: [react(), tailwindcss()],
+    plugins: [
+      react(), 
+      tailwindcss(),
+      {
+        name: 'root-logo-handler',
+        buildStart() {
+          const rootLogo = path.resolve(__dirname, 'logo.jpeg');
+          const publicDir = path.resolve(__dirname, 'public');
+          const publicLogo = path.resolve(publicDir, 'logo.jpeg');
+          if (fs.existsSync(rootLogo)) {
+            if (!fs.existsSync(publicDir)) {
+              fs.mkdirSync(publicDir, { recursive: true });
+            }
+            fs.copyFileSync(rootLogo, publicLogo);
+          }
+        },
+        closeBundle() {
+          const rootLogo = path.resolve(__dirname, 'logo.jpeg');
+          const distLogo = path.resolve(__dirname, 'dist/logo.jpeg');
+          if (fs.existsSync(rootLogo) && fs.existsSync(path.resolve(__dirname, 'dist'))) {
+            fs.copyFileSync(rootLogo, distLogo);
+          }
+        }
+      }
+    ],
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
