@@ -100,39 +100,6 @@ export default function App() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [currentSlide, navigateToSlide]);
 
-  // Touch Swipe Navigation for mobile / tablet
-  useEffect(() => {
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    const handleTouchStart = (e: TouchEvent) => {
-      touchStartX = e.changedTouches[0].screenX;
-    };
-
-    const handleTouchEnd = (e: TouchEvent) => {
-      touchEndX = e.changedTouches[0].screenX;
-      const diff = touchStartX - touchEndX;
-      if (Math.abs(diff) > 60) {
-        if (diff > 0 && currentSlide < SLIDE_TITLES.length - 1) {
-          // Swipe left -> Next
-          sound.playClick();
-          navigateToSlide(currentSlide + 1);
-        } else if (diff < 0 && currentSlide > 0) {
-          // Swipe right -> Prev
-          sound.playClick();
-          navigateToSlide(currentSlide - 1);
-        }
-      }
-    };
-
-    window.addEventListener('touchstart', handleTouchStart);
-    window.addEventListener('touchend', handleTouchEnd);
-    return () => {
-      window.removeEventListener('touchstart', handleTouchStart);
-      window.removeEventListener('touchend', handleTouchEnd);
-    };
-  }, [currentSlide, navigateToSlide]);
-
   const handleToggleSound = () => {
     const next = !soundEnabled;
     setSoundEnabled(next);
@@ -189,21 +156,31 @@ export default function App() {
               onNextSlide={() => navigateToSlide(1)}
             />
           )}
-          {currentSlide === 1 && <Slide2MediaShowcase />}
-          {currentSlide === 2 && <Slide3ContinentsLiteracy />}
-          {currentSlide === 3 && <Slide4MultiverseExpansions />}
+          {currentSlide === 1 && (
+            <Slide2MediaShowcase onNextSlide={() => navigateToSlide(2)} />
+          )}
+          {currentSlide === 2 && (
+            <Slide3ContinentsLiteracy onNextSlide={() => navigateToSlide(3)} />
+          )}
+          {currentSlide === 3 && (
+            <Slide4MultiverseExpansions onNextSlide={() => navigateToSlide(4)} />
+          )}
           {currentSlide === 4 && (
             <Slide5AccessibilityUDL
               udlSettings={udlSettings}
               onUpdateUDL={handleUpdateUDL}
+              onNextSlide={() => navigateToSlide(5)}
             />
           )}
           {currentSlide === 5 && (
             <Slide6DashboardsPricing
               onOpenGuestSandbox={() => setIsDemoOpen(true)}
+              onNextSlide={() => navigateToSlide(6)}
             />
           )}
-          {currentSlide === 6 && <Slide7PreSeededProfiles />}
+          {currentSlide === 6 && (
+            <Slide7PreSeededProfiles onNextSlide={() => navigateToSlide(7)} />
+          )}
           {currentSlide === 7 && <Slide8CrowdfundingBacker />}
         </div>
 

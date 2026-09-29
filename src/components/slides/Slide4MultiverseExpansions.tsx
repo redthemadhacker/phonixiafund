@@ -264,7 +264,11 @@ const DLC_REALMS: ExpansionDLC[] = [
   },
 ];
 
-export const Slide4MultiverseExpansions: React.FC = () => {
+interface Slide4MultiverseExpansionsProps {
+  onNextSlide?: () => void;
+}
+
+export const Slide4MultiverseExpansions: React.FC<Slide4MultiverseExpansionsProps> = ({ onNextSlide }) => {
   const [selectedDlcId, setSelectedDlcId] = useState<string>('dlc-math');
   const activeDlc = DLC_REALMS.find((d) => d.id === selectedDlcId) || DLC_REALMS[0];
 
@@ -421,6 +425,23 @@ export const Slide4MultiverseExpansions: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Slide 4 CTA footer note */}
+      {onNextSlide && (
+        <div className="mt-8 flex items-center justify-between gap-4 text-xs text-slate-400">
+          <button
+            onClick={() => {
+              sound.playClick();
+              onNextSlide();
+            }}
+            onMouseEnter={() => sound.playHover()}
+            className="inline-flex items-center gap-2 text-slate-300 hover:text-amber-400 transition-colors font-medium cursor-pointer"
+          >
+            <span>Continue to Sector 05: Clinical UDL & Neurodivergent Engine</span>
+            <ArrowRight className="w-3.5 h-3.5" />
+          </button>
+        </div>
+      )}
     </div>
   );
 };

@@ -15,7 +15,8 @@ import {
   ShieldCheck, 
   Server,
   FileCode,
-  Users
+  Users,
+  ArrowRight
 } from 'lucide-react';
 import { sound } from '../../utils/audio';
 import { speech } from '../../utils/speech';
@@ -32,7 +33,11 @@ interface VoxelGem {
   color: string;
 }
 
-export const Slide2MediaShowcase: React.FC = () => {
+interface Slide2MediaShowcaseProps {
+  onNextSlide?: () => void;
+}
+
+export const Slide2MediaShowcase: React.FC<Slide2MediaShowcaseProps> = ({ onNextSlide }) => {
   const [activeTab, setActiveTab] = useState<ShowcaseTab>('gameplay-sandbox');
   
   // Interactive Gameplay Canvas State (Evaluating ShellshoreArcade & WorldCanvas from repo)
@@ -551,6 +556,23 @@ export const ShellshoreArcade: React.FC = () => {
           </div>
         )}
       </div>
+
+      {/* Slide 2 CTA footer note */}
+      {onNextSlide && (
+        <div className="mt-8 flex items-center justify-between gap-4 text-xs text-slate-400">
+          <button
+            onClick={() => {
+              sound.playClick();
+              onNextSlide();
+            }}
+            onMouseEnter={() => sound.playHover()}
+            className="inline-flex items-center gap-2 text-slate-300 hover:text-amber-400 transition-colors font-medium cursor-pointer"
+          >
+            <span>Continue to Sector 03: The 5 Core Realms & Literacy Continents</span>
+            <ArrowRight className="w-3.5 h-3.5" />
+          </button>
+        </div>
+      )}
     </div>
   );
 };

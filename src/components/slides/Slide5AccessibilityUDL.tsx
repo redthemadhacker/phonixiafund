@@ -21,11 +21,13 @@ import { UDLSettings } from '../../types';
 interface Slide5Props {
   udlSettings: UDLSettings;
   onUpdateUDL: (settings: Partial<UDLSettings>) => void;
+  onNextSlide?: () => void;
 }
 
 export const Slide5AccessibilityUDL: React.FC<Slide5Props> = ({
   udlSettings,
   onUpdateUDL,
+  onNextSlide,
 }) => {
   const [adhdStep, setAdhdStep] = useState<number>(1);
   const [isSpeakingSample, setIsSpeakingSample] = useState<boolean>(false);
@@ -393,6 +395,23 @@ export const Slide5AccessibilityUDL: React.FC<Slide5Props> = ({
           />
         </div>
       </div>
+
+      {/* Slide 5 CTA footer note */}
+      {onNextSlide && (
+        <div className="mt-8 flex items-center justify-between gap-4 text-xs text-slate-400">
+          <button
+            onClick={() => {
+              sound.playClick();
+              onNextSlide();
+            }}
+            onMouseEnter={() => sound.playHover()}
+            className="inline-flex items-center gap-2 text-slate-300 hover:text-amber-400 transition-colors font-medium cursor-pointer"
+          >
+            <span>Continue to Sector 06: Roles, Dashboards & Pricing</span>
+            <ArrowRight className="w-3.5 h-3.5" />
+          </button>
+        </div>
+      )}
     </div>
   );
 };

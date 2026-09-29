@@ -252,7 +252,11 @@ const REALMS: RealmData[] = [
   }
 ];
 
-export const Slide3ContinentsLiteracy: React.FC = () => {
+interface Slide3ContinentsLiteracyProps {
+  onNextSlide?: () => void;
+}
+
+export const Slide3ContinentsLiteracy: React.FC<Slide3ContinentsLiteracyProps> = ({ onNextSlide }) => {
   const [selectedRealmId, setSelectedRealmId] = useState<string>('realm-1');
   const selectedRealm = REALMS.find((r) => r.id === selectedRealmId) || REALMS[0];
 
@@ -517,6 +521,23 @@ export const Slide3ContinentsLiteracy: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Slide 3 CTA footer note */}
+      {onNextSlide && (
+        <div className="mt-8 flex items-center justify-between gap-4 text-xs text-slate-400">
+          <button
+            onClick={() => {
+              sound.playClick();
+              onNextSlide();
+            }}
+            onMouseEnter={() => sound.playHover()}
+            className="inline-flex items-center gap-2 text-slate-300 hover:text-amber-400 transition-colors font-medium cursor-pointer"
+          >
+            <span>Continue to Sector 04: Multiverse DLC Expansions</span>
+            <ArrowRight className="w-3.5 h-3.5" />
+          </button>
+        </div>
+      )}
     </div>
   );
 };

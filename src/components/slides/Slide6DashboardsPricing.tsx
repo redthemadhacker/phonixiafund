@@ -12,17 +12,19 @@ import {
   FileText,
   UserCheck,
   ChevronRight,
-  SlidersHorizontal
+  SlidersHorizontal,
+  ArrowRight
 } from 'lucide-react';
 import { sound } from '../../utils/audio';
 
 interface Slide6Props {
   onOpenGuestSandbox: () => void;
+  onNextSlide?: () => void;
 }
 
 type RoleType = 'student' | 'parent' | 'classroom' | 'district';
 
-export const Slide6DashboardsPricing: React.FC<Slide6Props> = ({ onOpenGuestSandbox }) => {
+export const Slide6DashboardsPricing: React.FC<Slide6Props> = ({ onOpenGuestSandbox, onNextSlide }) => {
   const [activeRole, setActiveRole] = useState<RoleType>('parent');
 
   return (
@@ -286,6 +288,23 @@ export const Slide6DashboardsPricing: React.FC<Slide6Props> = ({ onOpenGuestSand
           </div>
         )}
       </div>
+
+      {/* Slide 6 CTA footer note */}
+      {onNextSlide && (
+        <div className="mt-8 flex items-center justify-between gap-4 text-xs text-slate-400">
+          <button
+            onClick={() => {
+              sound.playClick();
+              onNextSlide();
+            }}
+            onMouseEnter={() => sound.playHover()}
+            className="inline-flex items-center gap-2 text-slate-300 hover:text-amber-400 transition-colors font-medium cursor-pointer"
+          >
+            <span>Continue to Sector 07: Verified Evaluation Profiles (Kam & Lani)</span>
+            <ArrowRight className="w-3.5 h-3.5" />
+          </button>
+        </div>
+      )}
     </div>
   );
 };
