@@ -135,7 +135,7 @@ export const Slide7PreSeededProfiles: React.FC = () => {
                 Live Beta App Credentials (Heroku)
               </span>
               <a
-                href="https://phonixia-7c9c93ef0d42.herokuapp.com"
+                href="https://phonixiaalpha.herokuapp.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[11px] font-mono text-cyan-300 hover:text-white underline flex items-center gap-1"

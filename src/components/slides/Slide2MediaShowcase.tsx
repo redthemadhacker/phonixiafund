@@ -174,7 +174,7 @@ export const Slide2MediaShowcase: React.FC = () => {
         </div>
 
         <a
-          href="https://phonixia-7c9c93ef0d42.herokuapp.com"
+          href="https://phonixiaalpha.herokuapp.com"
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => sound.playClick()}

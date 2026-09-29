@@ -77,7 +77,7 @@ export const Slide1HeroManifesto: React.FC<Slide1Props> = ({ onOpenDemo, onNextS
                 LIVE PRODUCTION
               </span>
               <a
-                href="https://phonixia-7c9c93ef0d42.herokuapp.com"
+                href="https://phonixiaalpha.herokuapp.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-cyan-400 hover:text-white"
@@ -87,7 +87,7 @@ export const Slide1HeroManifesto: React.FC<Slide1Props> = ({ onOpenDemo, onNextS
               </a>
             </div>
             <a
-              href="https://phonixia-7c9c93ef0d42.herokuapp.com"
+              href="https://phonixiaalpha.herokuapp.com"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => sound.playClick()}
@@ -109,7 +109,7 @@ export const Slide1HeroManifesto: React.FC<Slide1Props> = ({ onOpenDemo, onNextS
             </div>
           </div>
           <a
-            href="https://phonixia-7c9c93ef0d42.herokuapp.com"
+            href="https://phonixiaalpha.herokuapp.com"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => sound.playClick()}
@@ -152,7 +152,7 @@ export const Slide1HeroManifesto: React.FC<Slide1Props> = ({ onOpenDemo, onNextS
 
         {/* Clean-Slate Core Engine Repo */}
         <a
-          href="https://github.com/redthemadhacker/phonixia-core"
+          href="https://github.com/redthemadhacker/phonixiaalpha"
           target="_blank"
           rel="noopener noreferrer"
           onMouseEnter={() => sound.playHover()}
@@ -171,7 +171,7 @@ export const Slide1HeroManifesto: React.FC<Slide1Props> = ({ onOpenDemo, onNextS
               Clean-Slate Engine
             </div>
             <p className="text-xs text-slate-400 mt-1 line-clamp-2">
-              github.com/redthemadhacker/phonixia-core
+              github.com/redthemadhacker/phonixiaalpha
             </p>
           </div>
           <div className="mt-3 text-[11px] font-mono text-purple-300/80 flex items-center gap-1">

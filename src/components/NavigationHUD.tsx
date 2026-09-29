@@ -122,38 +122,30 @@ export const NavigationHUD: React.FC<NavigationHUDProps> = ({
               Evaluation Data
             </button>
             <button
-              onClick={() => { sound.playClick(); onNavigate(7); }}
-              className={`hover:text-amber-400 transition-colors ${currentSlide === 7 ? 'text-amber-400 font-semibold underline underline-offset-8' : ''}`}
-            >
-              Back Engine
-            </button>
-          </nav>
-
-          {/* Zone 3: 1-2 Primary Actions */}
-          <div className="flex items-center gap-2.5">
-            <button
               onClick={() => {
                 sound.playClick();
                 onOpenDemo();
               }}
               onMouseEnter={() => sound.playHover()}
-              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-amber-300 bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 rounded-md transition-all shadow-[0_0_15px_rgba(245,158,11,0.15)] whitespace-nowrap cursor-pointer"
+              className="hover:text-amber-400 transition-colors flex items-center gap-1.5 cursor-pointer text-slate-300"
             >
               <PlayCircle className="w-3.5 h-3.5 text-amber-400" />
               <span>Instant Demo</span>
             </button>
+          </nav>
 
+          {/* Zone 3: 1 Primary Action */}
+          <div className="flex items-center gap-2.5">
             <button
               onClick={() => {
                 sound.playClick();
                 onNavigate(7);
               }}
               onMouseEnter={() => sound.playHover()}
-              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-slate-900 bg-amber-400 hover:bg-amber-300 rounded-md transition-all shadow-[0_0_20px_rgba(245,158,11,0.3)] whitespace-nowrap cursor-pointer"
+              className="flex items-center gap-2 px-4 py-2 text-xs font-bold text-slate-900 bg-amber-400 hover:bg-amber-300 rounded-md transition-all shadow-[0_0_20px_rgba(245,158,11,0.35)] whitespace-nowrap cursor-pointer font-['Outfit',sans-serif]"
             >
-              <HeartHandshake className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">Back Project</span>
-              <span className="sm:hidden">Pledge</span>
+              <HeartHandshake className="w-4 h-4" />
+              <span>Back Project</span>
             </button>
           </div>
         </div>
