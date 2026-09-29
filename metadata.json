@@ -1,0 +1,6 @@
+{
+  "name": "Phonixia: Multiverse Adventure Engine",
+  "description": "Interactive proposal and system codex for Phonixia — the solo-developed open-world voxel sandbox MMORPG dismantling industrial schooling.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
