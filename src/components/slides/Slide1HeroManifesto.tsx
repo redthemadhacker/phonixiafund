@@ -77,7 +77,7 @@ export const Slide1HeroManifesto: React.FC<Slide1Props> = ({ onOpenDemo, onNextS
                 LIVE PRODUCTION (BETA)
               </span>
               <a
-                href="https://phonixiaalpha.herokuapp.com"
+                href="https://phonixia-7c9c93ef0d42.herokuapp.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-cyan-400 hover:text-white"
