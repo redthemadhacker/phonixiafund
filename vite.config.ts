@@ -7,7 +7,6 @@ export default defineConfig(() => {
   return {
     plugins: [
       react(), 
-      tailwindcss(),
       {
         name: 'root-logo-handler',
         buildStart() {
