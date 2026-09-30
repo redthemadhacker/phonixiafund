@@ -74,7 +74,7 @@ export const Slide1HeroManifesto: React.FC<Slide1Props> = ({ onOpenDemo, onNextS
             <div className="flex items-center justify-between text-xs text-cyan-400 font-mono mb-2">
               <span className="flex items-center gap-1">
                 <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
-                LIVE PRODUCTION
+                LIVE PRODUCTION (IN PROGRESS)
               </span>
               <a
                 href="https://phonixiaalpha.herokuapp.com"
@@ -109,7 +109,7 @@ export const Slide1HeroManifesto: React.FC<Slide1Props> = ({ onOpenDemo, onNextS
             </div>
           </div>
           <a
-            href="https://phonixiaalpha.herokuapp.com"
+            href="https://phonixia-7c9c93ef0d42.herokuapp.com/"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => sound.playClick()}
