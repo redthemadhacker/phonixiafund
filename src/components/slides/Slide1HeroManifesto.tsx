@@ -74,7 +74,7 @@ export const Slide1HeroManifesto: React.FC<Slide1Props> = ({ onOpenDemo, onNextS
             <div className="flex items-center justify-between text-xs text-cyan-400 font-mono mb-2">
               <span className="flex items-center gap-1">
                 <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
-                LIVE PRODUCTION (IN PROGRESS)
+                LIVE PRODUCTION (BETA)
               </span>
               <a
                 href="https://phonixiaalpha.herokuapp.com"
@@ -133,7 +133,8 @@ export const Slide1HeroManifesto: React.FC<Slide1Props> = ({ onOpenDemo, onNextS
             <div className="flex items-center justify-between text-xs text-amber-400 font-mono mb-2">
               <span className="flex items-center gap-1">
                 <Code2 className="w-3.5 h-3.5" />
-                PROTOTYPE REPO
+                BETA REPO 
+
               </span>
               <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </div>
@@ -163,7 +164,7 @@ export const Slide1HeroManifesto: React.FC<Slide1Props> = ({ onOpenDemo, onNextS
             <div className="flex items-center justify-between text-xs text-purple-400 font-mono mb-2">
               <span className="flex items-center gap-1">
                 <Flame className="w-3.5 h-3.5" />
-                CORE ENGINE
+                PROTOTYPE REPO (ALPHA)
               </span>
               <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </div>
