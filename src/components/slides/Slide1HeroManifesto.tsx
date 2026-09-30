@@ -27,7 +27,7 @@ export const Slide1HeroManifesto: React.FC<Slide1Props> = ({ onOpenDemo, onNextS
         <span aria-hidden="true">·</span>
         <span>SOLO ARCHITECT MANIFESTO</span>
         <span aria-hidden="true">·</span>
-        <span>AMARI JAMES (THE MAD HACKER)</span>
+        <span>AMARI JAMES (RED THE MAD HACKER)</span>
       </div>
 
       {/* High-Impact Headline with text-wrap balance */}
@@ -87,7 +87,7 @@ export const Slide1HeroManifesto: React.FC<Slide1Props> = ({ onOpenDemo, onNextS
               </a>
             </div>
             <a
-              href="https://phonixiaalpha.herokuapp.com"
+              href="https://phonixia-7c9c93ef0d42.herokuapp.com/"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => sound.playClick()}
