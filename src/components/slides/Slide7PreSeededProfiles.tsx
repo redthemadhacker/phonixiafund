@@ -153,7 +153,7 @@ export const Slide7PreSeededProfiles: React.FC<Slide7PreSeededProfilesProps> = (
           </button>
 
           <a
-            href="https://phonixiaalpha.herokuapp.com"
+            href="https://phonixia-7c9c93ef0d42.herokuapp.com/"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => sound.playClick()}

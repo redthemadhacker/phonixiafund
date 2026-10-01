@@ -187,6 +187,10 @@ export const Slide8CrowdfundingBacker: React.FC = () => {
               <Target className="w-3.5 h-3.5 text-amber-400" />
               <span>Target: $50,000 Initial Solo Runway & Tools Milestone</span>
             </div>
+            <div className="text-xs font-mono text-amber-400 uppercase font-semibold flex items-center gap-1.5">
+              <Target className="w-3.5 h-3.5 text-amber-400" />
+              <span>DEV NOTE: Stripe payment link pending, only accepting cashapp/direct donations at this time.</span>
+            </div>
             <div className="font-['Cinzel',serif] text-2xl sm:text-3xl font-black text-white">
               ${currentRaised.toLocaleString()}{' '}
               <span className="text-sm font-sans font-normal text-slate-400">

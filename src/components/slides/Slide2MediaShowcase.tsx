@@ -179,7 +179,7 @@ export const Slide2MediaShowcase: React.FC<Slide2MediaShowcaseProps> = ({ onNext
         </div>
 
         <a
-          href="https://phonixiaalpha.herokuapp.com"
+          href="https://phonixia-7c9c93ef0d42.herokuapp.com/"
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => sound.playClick()}
