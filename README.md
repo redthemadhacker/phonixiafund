@@ -4,7 +4,7 @@ An interactive, slide-based proposal and crowdfunding presentation platform buil
 
 ## 🚀 Live Demo
 * **Production App:** [https://phonixiafund-1c7dbdac42f6.herokuapp.com/](https://phonixiafund-1c7dbdac42f6.herokuapp.com/)[cite: 6]
-* **Custom Domain:** `phonixia.fund` *(DNS mapping in progress)*
+* **Custom Domain:** `https://www.phonixia.fund` 
 
 ---
 
