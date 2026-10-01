@@ -12,6 +12,7 @@ import { Slide4MultiverseExpansions } from './components/slides/Slide4Multiverse
 import { Slide5AccessibilityUDL } from './components/slides/Slide5AccessibilityUDL';
 import { Slide6DashboardsPricing } from './components/slides/Slide6DashboardsPricing';
 import { Slide7PreSeededProfiles } from './components/slides/Slide7PreSeededProfiles';
+import { Slide8CrowdfundingBacker } from './components/slides/Slide8CrowdfundingBacker';
 import { LegalTrademarksFooter } from './components/LegalTrademarksFooter';
 
 import { sound } from './utils/audio';
