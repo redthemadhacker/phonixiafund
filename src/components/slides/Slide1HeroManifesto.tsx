@@ -69,8 +69,8 @@ export const Slide1HeroManifesto: React.FC<Slide1Props> = ({ onOpenDemo, onNextS
       {/* Glowing Portal Badges & Launch Gateways */}
       <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 max-w-4xl">
         {/* Play Current Live Beta */}
-        <div className="group relative p-4 rounded-xl bg-[#0e1627]/90 hover:bg-[#132039] border border-cyan-500/30 hover:border-cyan-400 transition-all duration-200 shadow-[0_0_20px_rgba(6,182,212,0.15)] flex flex-col justify-between">
-          <div>
+        <div className="group relative p-4 rounded-xl bg-[#0e1627]/90 hover:bg-[#132039] border border-cyan-500/30 hover:border-cyan-400 transition-all duration-200 shadow-[0_0_20px_rgba(6,182,212,0.15)] flex flex-col justify-between overflow-hidden">
+          <div className="min-w-0">
             <div className="flex items-center justify-between text-xs text-cyan-400 font-mono mb-2">
               <span className="flex items-center gap-1">
                 <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
@@ -91,20 +91,20 @@ export const Slide1HeroManifesto: React.FC<Slide1Props> = ({ onOpenDemo, onNextS
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => sound.playClick()}
-              className="block font-['Outfit',sans-serif] text-base font-bold text-white group-hover:text-cyan-300 transition-colors"
+              className="block font-['Outfit',sans-serif] text-base font-bold text-white group-hover:text-cyan-300 transition-colors truncate"
             >
               Play Live Beta
             </a>
             
-            {/* Live Beta Credentials Box */}
-            <div className="mt-2 p-2 rounded-lg bg-black/60 border border-cyan-500/20 text-[11px] font-mono space-y-0.5">
-              <div className="flex items-center justify-between">
-                <span className="text-slate-400">User:</span>
-                <span className="text-amber-300 font-bold selection:bg-amber-500/40">readingheroes</span>
+            {/* Live Beta Credentials Box - Added min-w-0 and truncate safeguards */}
+            <div className="mt-2 p-2 rounded-lg bg-black/60 border border-cyan-500/20 text-[11px] font-mono space-y-0.5 w-full min-w-0">
+              <div className="flex items-center justify-between gap-2 min-w-0">
+                <span className="text-slate-400 shrink-0">User:</span>
+                <span className="text-amber-300 font-bold selection:bg-amber-500/40 truncate">readingheroes</span>
               </div>
-              <div className="flex items-center justify-between">
-                <span className="text-slate-400">Pass:</span>
-                <span className="text-emerald-300 font-bold selection:bg-emerald-500/40">phonics123</span>
+              <div className="flex items-center justify-between gap-2 min-w-0">
+                <span className="text-slate-400 shrink-0">Pass:</span>
+                <span className="text-emerald-300 font-bold selection:bg-emerald-500/40 truncate">phonics123</span>
               </div>
             </div>
           </div>
@@ -127,22 +127,21 @@ export const Slide1HeroManifesto: React.FC<Slide1Props> = ({ onOpenDemo, onNextS
           rel="noopener noreferrer"
           onMouseEnter={() => sound.playHover()}
           onClick={() => sound.playClick()}
-          className="group relative p-4 rounded-xl bg-[#0e1627]/90 hover:bg-[#132039] border border-white/10 hover:border-amber-400/50 transition-all duration-200 flex flex-col justify-between"
+          className="group relative p-4 rounded-xl bg-[#0e1627]/90 hover:bg-[#132039] border border-white/10 hover:border-amber-400/50 transition-all duration-200 flex flex-col justify-between overflow-hidden"
         >
-          <div>
+          <div className="min-w-0">
             <div className="flex items-center justify-between text-xs text-amber-400 font-mono mb-2">
               <span className="flex items-center gap-1">
                 <Code2 className="w-3.5 h-3.5" />
                 BETA REPO 
-
               </span>
               <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </div>
-            <div className="font-['Outfit',sans-serif] text-base font-bold text-white group-hover:text-amber-300 transition-colors">
+            <div className="font-['Outfit',sans-serif] text-base font-bold text-white group-hover:text-amber-300 transition-colors truncate">
               Prototype Codebase
             </div>
-            <p className="text-xs text-slate-400 mt-1 line-clamp-2">
-              github.com/redthemadhacker/phonixia
+            <p className="text-xs text-slate-400 mt-1 line-clamp-2 break-all">
+              View the code behind the live b-eta project.
             </p>
           </div>
           <div className="mt-3 text-[11px] font-mono text-amber-300/80 flex items-center gap-1">
@@ -151,32 +150,32 @@ export const Slide1HeroManifesto: React.FC<Slide1Props> = ({ onOpenDemo, onNextS
           </div>
         </a>
 
-        {/* Clean-Slate Core Engine Repo */}
+        {/* Amazon Wishlist */}
         <a
-          href="https://github.com/redthemadhacker/phonixiaalpha"
+          href="https://www.amazon.com/hz/wishlist/ls/2XEMVSP73LYKU?ref_=wl_share"
           target="_blank"
           rel="noopener noreferrer"
           onMouseEnter={() => sound.playHover()}
           onClick={() => sound.playClick()}
-          className="group relative p-4 rounded-xl bg-[#0e1627]/90 hover:bg-[#132039] border border-white/10 hover:border-purple-400/50 transition-all duration-200 flex flex-col justify-between"
+          className="group relative p-4 rounded-xl bg-[#0e1627]/90 hover:bg-[#132039] border border-white/10 hover:border-purple-400/50 transition-all duration-200 flex flex-col justify-between overflow-hidden"
         >
-          <div>
+          <div className="min-w-0">
             <div className="flex items-center justify-between text-xs text-purple-400 font-mono mb-2">
               <span className="flex items-center gap-1">
                 <Flame className="w-3.5 h-3.5" />
-                PROTOTYPE REPO (ALPHA)
+                DEV WISHLIST
               </span>
               <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </div>
-            <div className="font-['Outfit',sans-serif] text-base font-bold text-white group-hover:text-purple-300 transition-colors">
-              Clean-Slate Engine
+            <div className="font-['Outfit',sans-serif] text-base font-bold text-white group-hover:text-purple-300 transition-colors truncate">
+              Engineer Tools
             </div>
-            <p className="text-xs text-slate-400 mt-1 line-clamp-2">
-              github.com/redthemadhacker/phonixiaalpha
+            <p className="text-xs text-slate-400 mt-1 line-clamp-2 break-all">
+              Necessities and creature comf-orts for game build.
             </p>
           </div>
           <div className="mt-3 text-[11px] font-mono text-purple-300/80 flex items-center gap-1">
-            <span>High-Speed Voxel Runtime</span>
+            <span>Purchase a Wishlist Gift</span>
             <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
           </div>
         </a>
@@ -188,26 +187,27 @@ export const Slide1HeroManifesto: React.FC<Slide1Props> = ({ onOpenDemo, onNextS
             onOpenDemo();
           }}
           onMouseEnter={() => sound.playHover()}
-          className="group relative p-4 rounded-xl bg-gradient-to-br from-amber-500/20 via-yellow-500/10 to-amber-600/20 hover:from-amber-500/30 hover:to-amber-600/30 border border-amber-400/60 hover:border-amber-400 transition-all duration-200 shadow-[0_0_30px_rgba(245,158,11,0.25)] flex flex-col justify-between text-left cursor-pointer"
+          className="group relative p-4 rounded-xl bg-gradient-to-br from-amber-500/20 via-yellow-500/10 to-amber-600/20 hover:from-amber-500/30 hover:to-amber-600/30 border border-amber-400/60 hover:border-amber-400 transition-all duration-200 shadow-[0_0_30px_rgba(245,158,11,0.25)] flex flex-col justify-between text-left cursor-pointer overflow-hidden"
         >
-          <div>
+          <div className="min-w-0">
             <div className="flex items-center justify-between text-xs text-amber-300 font-mono mb-2">
               <span className="flex items-center gap-1 font-bold">
                 <Sparkles className="w-3.5 h-3.5 text-amber-300 animate-spin" />
                 INSTANT EVALUATION
               </span>
-              <PlayCircle className="w-4 h-4 text-amber-300" />
+              <PlayCircle className="w-4 h-4 text-amber-300 shrink-0" />
             </div>
-            <div className="font-['Outfit',sans-serif] text-base font-black text-white group-hover:text-amber-200 transition-colors">
+            <div className="font-['Outfit',sans-serif] text-base font-black text-white group-hover:text-amber-200 transition-colors truncate">
               1-Click Demo Mode
             </div>
-            <p className="text-xs text-slate-300 mt-1 line-clamp-2">
-              Smelt phonemes & craft words in the interactive forge right now.
+            {/* Added break-words just in case the description tries to escape on thin mobile screens */}
+            <p className="text-xs text-slate-300 mt-1 line-clamp-2 break-words">
+              Smelt phonemes & craft words in the interactive demo.
             </p>
           </div>
           <div className="mt-3 text-[11px] font-mono text-amber-200 font-bold flex items-center gap-1">
-            <span>Launch In-Page Sandbox</span>
-            <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+            <span className="truncate">Launch In-Page Sandbox</span>
+            <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform shrink-0" />
           </div>
         </button>
       </div>
