@@ -1,33 +1,52 @@
-# Phonixia Fund
+# Phonixia Fund // Venture Proposal & Backer Platform
 
-An interactive, slide-based proposal and crowdfunding presentation platform built for the Phonixia ecosystem. Designed to showcase venture goals, structure equity/crowdfunding tiers, and engage backers through a seamless interactive interface.
-
-## 🚀 Live Demo
-* **Production App:** [https://phonixiafund-1c7dbdac42f6.herokuapp.com/](https://phonixiafund-1c7dbdac42f6.herokuapp.com/)[cite: 6]
-* **Custom Domain:** `https://www.phonixia.fund` 
+> **Live Production:** [https://www.phonixia.fund](https://www.phonixia.fund)  
+> `root@phonixia:~# solo founder campaign // 6-month launch runway // EST. 2026`
 
 ---
 
-## 🛠️ Tech Stack
+## Overview
 
-* **Frontend:** React, Vite, Tailwind CSS (via `@tailwindcss/postcss`)
-* **Routing / Components:** Modular slide architecture (`Slide*` component hierarchy)
-* **Hosting & Deployment:** Heroku (Node.js buildpack)
+**Phonixia Fund** is an interactive, slide-based proposal and crowdfunding presentation platform engineered for the Phonixia ecosystem. 
+
+Designed to showcase venture goals, structure equity and crowdfunding tiers, and engage backers through a seamless interactive interface, the application presents venture milestones, pedagogical architecture, and multi-tier funding pathways to backers, educators, and indie investors through a responsive terminal-grade interface.
 
 ---
 
-## 📦 Project Structure
+## Technical Stack
 
-```text
-├── public/                # Static assets, logos, and favicons
-├── src/
-│   ├── components/
-│   │   ├── slides/        # Individual presentation/proposal slide modules
-│   │   │   └── Slide8CrowdfundingBacker.tsx
-│   │   └── ...
-│   ├── App.tsx            # Main application layout and slide controller
-│   ├── main.tsx           # Application entry point
-│   └── index.css          # Global styles & Tailwind configuration
-├── postcss.config.mjs     # PostCSS runner configuration
-├── vite.config.ts         # Vite bundler configuration
-└── package.json           # Dependencies and scripts
+- **Framework:** [React 18](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- **Bundler & Tooling:** [Vite](https://vitejs.dev/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/) (via `@tailwindcss/postcss`)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Audio Effects:** Custom Web Audio API synthesizer modules
+- **Hosting & Infrastructure:** [Heroku](https://www.heroku.com/)
+- **DNS & SSL:** Exact Hosting (CNAME pointing to Heroku DNS target with Automated Certificate Management / Let's Encrypt)
+- **Payment Gateway:** Stripe Payment Links (Flat-rate tier routing) & Direct Cash App Integration
+
+---
+
+## Key Modules & Architecture
+
+The application implements a modular slide deck architecture (`Slide*` component hierarchy) managed via `App.tsx` to ensure static host compatibility and seamless interactive presentations.
+
+* **`Slide8CrowdfundingBacker.tsx`:** Dynamic backer terminal with direct routing across 6 funding tiers ($25 Codex, $50 Beta Pioneer, $100 Founding Family, $250 Classroom Champion, $500 Master Architect, and $1,000 Guild Patron) hooked into individual Stripe payment links.
+* **Payment Redundancy:** Integrated support for Credit/Debit Cards, Apple Pay, Google Pay, and Cash App (`$luvdinero`).
+* **Live Progress Engine:** Client-side tracking with automated percentage calculations toward the $50,000 solo runway milestone.
+* **Engine Architecture Slides:** Visual technical deep-dives into the clean-slate voxel engine, procedural reading parser, and 6-month delivery schedule.
+
+---
+
+## Local Development
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18+ recommended)
+- [npm](https://www.npmjs.com/)
+
+### Installation & Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://git.heroku.com/phonixiafund.git](https://git.heroku.com/phonixiafund.git)
+   cd phonixiafund
